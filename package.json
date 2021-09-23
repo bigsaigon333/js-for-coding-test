@@ -1,0 +1,47 @@
+{
+  "name": "js-for-coding-test",
+  "version": "0.0.1",
+  "repository": "https://github.com/bigsaigon333/js-for-coding-test.git",
+  "author": {
+    "name": "Danny Kim",
+    "email": "likepeppermint@gmail.com",
+    "url": "https://velog.io/@bigsaigon333"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --fix --cache **/*.js",
+    "format": "prettier --write --ignore-unknown .",
+    "prepare": "husky install"
+  },
+  "engines": {
+    "node": ">=12.18.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "2.3.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": false,
+      "node": true,
+      "commonjs": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    }
+  },
+  "prettier": {},
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*": "prettier --write --ignore-unknown"
+  }
+}
